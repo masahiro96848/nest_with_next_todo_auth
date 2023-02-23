@@ -13,6 +13,7 @@ services:
             TZ: Asia/Tokyo # タイムゾーンを日本時刻に設定
         security_opt:
             - seccomp:unconfined
+        command: sh -c 'npm install && npm run dev'
     backend:
         container_name: backend
         build: ./api-server
@@ -28,6 +29,7 @@ services:
             - 8080:3000
         security_opt:
             - seccomp:unconfined
+        command: sh -c 'npm install && npm run start:dev'
     db:
         container_name: db
         environment:
