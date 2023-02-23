@@ -6,6 +6,12 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+model Todo {
+  id Int @default(autoincrement()) @id
+  title String @db.MediumText
+  content String @db.Text
 }
