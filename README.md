@@ -10,7 +10,7 @@ docker compose build
 ```
 # フロントエンド、バックエンド、DBのコンテナを起動
 docker compose up -d
-
+```
 ※初回起動時は立ち上げに時間かかる。
 
 ### ブラウザ表示
