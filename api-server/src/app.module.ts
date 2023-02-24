@@ -5,6 +5,5 @@ import { TodoModule } from './todo/todo.module';
 
 @Module({
   imports: [TodoModule],
-  controllers: [TodoController],
 })
 export class AppModule {}

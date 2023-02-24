@@ -1,6 +1,6 @@
 import { useMemo, useState, useCallback } from 'react'
-import { TodoType } from '../../../interfaces/Todo'
-import { EventType } from '../../../interfaces/Event'
+import { TodoType } from '@/interfaces/Todo'
+import { EventType } from '@/interfaces/Event'
 
 type Params = {
     originTodoList: Array<TodoType>

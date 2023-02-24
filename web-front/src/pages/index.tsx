@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import { TodoTemplate } from '../components/templates/TodoTemplate/index'
+import { TodoTemplate } from '@/components/templates/TodoTemplate/index'
 
 const TodoListPage: NextPage = () => <TodoTemplate />
 

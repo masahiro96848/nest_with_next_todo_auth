@@ -1,4 +1,4 @@
-import { TodoType } from '../interfaces/Todo'
+import { TodoType } from '@/interfaces/Todo'
 
 export const INIT_TODO_LIST: Array<TodoType> = [
     {

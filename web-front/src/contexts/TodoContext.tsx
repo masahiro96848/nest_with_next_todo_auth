@@ -1,6 +1,6 @@
 import { useContext, createContext, ReactNode } from 'react'
-import { useTodo } from '../hooks/useTodo'
-import { TodoType } from '../interfaces/Todo'
+import { useTodo } from '@/hooks/useTodo'
+import { TodoType } from '@/interfaces/Todo'
 
 type Props = {
     children: ReactNode

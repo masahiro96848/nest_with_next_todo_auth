@@ -1,30 +1,19 @@
-import { useState, useCallback } from 'react'
-import { INIT_TODO_LIST, INIT_UNIQUE_ID } from '../constants/data'
-import { TodoType } from '../interfaces/Todo'
+import { useState, useCallback, useEffect } from 'react'
+import { fetchTodoListApi } from '@/api/todoApi'
+import { TodoType } from '@/interfaces/Todo'
 
 export const useTodo = () => {
-    const [originTodoList, setOriginTodoList] = useState(INIT_TODO_LIST)
-    const [uniqueId, setUniqueId] = useState(INIT_UNIQUE_ID)
+    /** todoList */
+    const [originTodoList, setOriginTodoList] = useState<Array<TodoType>>([])
+
+    /** actions */
+    const fetchTodoList = useCallback(async (): Promise<void> => {
+        const data = await fetchTodoListApi()
+        setOriginTodoList(typeof data === 'object' ? data : [])
+    }, [])
 
     // Todoの新規登録処理
-    const addTodo = useCallback(
-        (title: string, content: string) => {
-            const nextUniqueId = uniqueId + 1
-            const newTodo = [
-                ...originTodoList,
-                {
-                    id: nextUniqueId,
-                    title: title,
-                    content: content,
-                },
-            ]
-            // todoListを更新
-            setOriginTodoList(newTodo)
-            // 採番IDを更新
-            setUniqueId(nextUniqueId)
-        },
-        [originTodoList, uniqueId]
-    )
+    const addTodo = () => {}
 
     /**
      * Todoを更新する処理
@@ -52,15 +41,17 @@ export const useTodo = () => {
     const handleDeleteTodo = useCallback(
         (targetId: number, targetTitle: string) => {
             if (window.confirm(`「${targetTitle}」のtodoを削除しますか？`)) {
-                const newTodoList = originTodoList.filter(
-                    (todo) => todo.id !== targetId
-                )
+                const newTodoList = originTodoList.filter((todo) => todo.id !== targetId)
 
                 setOriginTodoList(newTodoList)
             }
         },
         [originTodoList]
     )
+
+    useEffect(() => {
+        fetchTodoList()
+    }, [fetchTodoList])
 
     return {
         originTodoList,
