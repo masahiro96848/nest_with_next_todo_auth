@@ -1,5 +1,5 @@
 import { AxiosResponse } from 'axios'
-import globalAxios, { isAxiosError } from '@/api/config'
+import globalAxios, { isAxiosError, ResponseType, IErrorResponse } from '@/api/config'
 import { TodoType } from '@/interfaces/Todo'
 
 /**
@@ -8,11 +8,22 @@ import { TodoType } from '@/interfaces/Todo'
 export const fetchTodoListApi = async () => {
     try {
         const { data }: AxiosResponse<Array<TodoType>> = await globalAxios.get('/todo')
-        return data
-    } catch (err) {
-        if (isAxiosError(err)) {
-            return err.code
+        const res: ResponseType<Array<TodoType>> = {
+            code: 200,
+            data,
         }
+        return res
+    } catch (err) {
+        const res: ResponseType = {
+            code: 500,
+            message: '',
+        }
+        if (isAxiosError(err)) {
+            const axiosError = err as IErrorResponse
+            res.code = axiosError.response.status
+            res.message = axiosError.response.data.message
+        }
+        return res
     }
 }
 
