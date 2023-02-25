@@ -33,7 +33,7 @@ services:
     db:
         container_name: db
         environment:
-            - MYSQL_DATABASE=nest_next_todo
+            - MYSQL_DATABASE=nest_next_todo_auth
             - MYSQL_USER=user
             - MYSQL_PASSWORD=pass
             - MYSQL_ROOT_PASSWORD=pass
