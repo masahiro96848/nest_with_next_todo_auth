@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react'
-import { fetchTodoListApi, createTodoApi } from '@/api/todoApi'
+import { fetchTodoListApi, createTodoApi, updateTodoApi } from '@/api/todoApi'
 import { TodoType } from '@/interfaces/Todo'
 
 export const useTodo = () => {
@@ -35,13 +35,15 @@ export const useTodo = () => {
      * Todoを更新する処理
      */
     const updateTodo = useCallback(
-        (id: number, title: string, content: string) => {
+        async (id: number, title: string, content: string) => {
+            const responseTodo = await updateTodoApi(id, title, content)
+            if (typeof responseTodo !== 'object') return
             const updatedTodoList = originTodoList.map((todo) => {
-                if (id === todo.id) {
+                if (responseTodo.id === todo.id) {
                     return {
-                        id: todo.id,
-                        title: title,
-                        content: content,
+                        id: responseTodo.id,
+                        title: responseTodo.title,
+                        content: responseTodo.content,
                     }
                 }
                 return todo
