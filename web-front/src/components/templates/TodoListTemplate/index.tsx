@@ -4,7 +4,7 @@ import { TodoList } from '@/components/organisms/TodoList'
 import { useTodoContext } from '@/contexts/TodoContext'
 import { useTodoTemplate } from './useTodoTemplate'
 
-export const TodoTemplate = () => {
+export const TodoListTemplate = () => {
     const { originTodoList, handleDeleteTodo } = useTodoContext()
 
     const [{ searchKeyword, showTodoList }, { handleChangeSearchKeyword }] = useTodoTemplate({ originTodoList })
