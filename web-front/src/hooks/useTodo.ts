@@ -1,15 +1,18 @@
 import { useState, useCallback, useEffect } from 'react'
+import { useAuthContext } from '@/contexts/AuthContext'
 import { fetchTodoListApi, createTodoApi, updateTodoApi, deleteTodoApi } from '@/api/todoApi'
 import { TodoType } from '@/interfaces/Todo'
 
 export const useTodo = () => {
+    const { isAuth } = useAuthContext()
+
     /** todoList */
     const [originTodoList, setOriginTodoList] = useState<Array<TodoType>>([])
 
     /** actions */
     const fetchTodoList = useCallback(async (): Promise<void> => {
-        const data = await fetchTodoListApi()
-        setOriginTodoList(typeof data === 'object' ? data : [])
+        const res = await fetchTodoListApi()
+        setOriginTodoList(res?.data && typeof res.data === 'object' ? res.data : [])
     }, [])
 
     /**
