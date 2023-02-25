@@ -1,5 +1,5 @@
 import { AxiosResponse } from 'axios'
-import { globalAxios, isAxiosError } from '@/api/config'
+import globalAxios, { isAxiosError } from '@/api/config'
 import { TodoType } from '@/interfaces/Todo'
 
 /**
