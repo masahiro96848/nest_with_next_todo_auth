@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react'
-import { fetchTodoListApi, createTodoApi, updateTodoApi } from '@/api/todoApi'
+import { fetchTodoListApi, createTodoApi, updateTodoApi, deleteTodoApi } from '@/api/todoApi'
 import { TodoType } from '@/interfaces/Todo'
 
 export const useTodo = () => {
@@ -57,12 +57,12 @@ export const useTodo = () => {
      * Todoを削除する処理
      */
     const handleDeleteTodo = useCallback(
-        (targetId: number, targetTitle: string) => {
-            if (window.confirm(`「${targetTitle}」のtodoを削除しますか？`)) {
-                const newTodoList = originTodoList.filter((todo) => todo.id !== targetId)
+        async (targetId: number, targetTitle: string) => {
+            const deletedTodo = await deleteTodoApi(targetId)
+            if (typeof deletedTodo !== 'object') return
 
-                setOriginTodoList(newTodoList)
-            }
+            // todoを削除したtodoListで更新
+            setOriginTodoList(originTodoList.filter((todo) => todo.id !== deletedTodo.id))
         },
         [originTodoList]
     )
