@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react'
-import { fetchTodoListApi } from '@/api/todoApi'
+import { fetchTodoListApi, createTodoApi } from '@/api/todoApi'
 import { TodoType } from '@/interfaces/Todo'
 
 export const useTodo = () => {
@@ -12,8 +12,24 @@ export const useTodo = () => {
         setOriginTodoList(typeof data === 'object' ? data : [])
     }, [])
 
-    // Todoの新規登録処理
-    const addTodo = () => {}
+    /**
+     * Todo新規登録処理
+     */
+    const addTodo = useCallback(
+        async (title: string, content: string) => {
+            const todo = await createTodoApi(title, content)
+            if (typeof todo !== 'object') return
+            setOriginTodoList([
+                ...originTodoList,
+                {
+                    id: todo.id,
+                    title: todo.title,
+                    content: todo.content,
+                },
+            ])
+        },
+        [originTodoList]
+    )
 
     /**
      * Todoを更新する処理

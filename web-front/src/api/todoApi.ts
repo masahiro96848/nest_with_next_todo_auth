@@ -15,3 +15,20 @@ export const fetchTodoListApi = async () => {
         }
     }
 }
+
+/**
+ * Todo新規登録のAPI接続処理
+ */
+export const createTodoApi = async (title: string, content: string) => {
+    try {
+        const { data }: AxiosResponse<TodoType> = await globalAxios.post('/todo', {
+            title,
+            content,
+        })
+        return data
+    } catch (err) {
+        if (isAxiosError(err)) {
+            return err.code
+        }
+    }
+}
