@@ -25,8 +25,54 @@ body {
 
 /* nav */
 .header {
+    width: 100%;
+}
+
+.header-area {
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.header-title {
+    padding-left: 70px;
+    color: #fff;
+}
+
+.header-nav {
+    width: 40%;
+}
+
+.header-ul {
+    width: 100%;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.header-li {
+    list-style: none;
+}
+
+.header-button {
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    transition: 0.3s;
+    display: block;
+    background-color: #fff;
+    text-decoration: none;
+    color: #008080;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 10px;
 }
 
 .nav-button {

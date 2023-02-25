@@ -8,14 +8,14 @@ export const Navigation = () => {
     const { handleLogout } = useNavigation({ signOut })
 
     return (
-        <div className="header">
-            <h1 className="title">Todo List</h1>
-            <nav className="nav">
-                <ul className="ul">
+        <div className="header-area">
+            <h1 className="header-title">Todo List</h1>
+            <nav className="header-nav">
+                <ul className="header-ul">
                     <NavigationLink title={'Top'} linkPath={NAVIGATION_PATH.TOP} />
                     <NavigationLink title={'Create'} linkPath={NAVIGATION_PATH.CREATE} />
-                    <li className="li">
-                        <button className="button" onClick={handleLogout}>
+                    <li className="header-li">
+                        <button className="header-button" onClick={handleLogout}>
                             SignOut
                         </button>
                     </li>
