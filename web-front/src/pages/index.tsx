@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
-import { TodoTemplate } from '@/components/templates/TodoTemplate/index'
+import { SignInTemplate } from '@/components/templates/SignInTemplate'
 
-const TodoListPage: NextPage = () => <TodoTemplate />
+const SignInPage: NextPage = () => <SignInTemplate />
 
-export default TodoListPage
+export default SignInPage

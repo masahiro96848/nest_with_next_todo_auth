@@ -8,12 +8,14 @@ type Props = {
 
 export const BaseLayout = ({ title, children }: Props) => {
     return (
-        <div className="container">
-            <section className="common">
+        <div>
+            <header className="header">
                 <Navigation />
-            </section>
-            <h1 className="title">{title}</h1>
-            {children}
+            </header>
+            <main className="container">
+                <h1 className="title">{title}</h1>
+                {children}
+            </main>
         </div>
     )
 }
