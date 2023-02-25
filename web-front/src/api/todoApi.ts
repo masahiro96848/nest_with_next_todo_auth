@@ -32,3 +32,17 @@ export const createTodoApi = async (title: string, content: string) => {
         }
     }
 }
+
+/**
+ * idに紐づく単一のTodo取得のAPI接続処理
+ */
+export const fetchTodoDetailApi = async (id: number) => {
+    try {
+        const { data }: AxiosResponse<TodoType> = await globalAxios.get(`/todo/${id}`)
+        return data
+    } catch (err) {
+        if (isAxiosError(err)) {
+            return err.code
+        }
+    }
+}

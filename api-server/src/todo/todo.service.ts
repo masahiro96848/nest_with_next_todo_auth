@@ -19,4 +19,12 @@ export class TodoService {
       },
     });
   }
+
+  async findOne(id: number) {
+    return await this.prisma.todo.findFirst({
+      where: {
+        id,
+      },
+    });
+  }
 }
