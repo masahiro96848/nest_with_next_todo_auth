@@ -1,216 +1,217 @@
 body {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color: rgba(63, 248, 103, 0.71);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+        sans-serif;
+    background-color: rgba(63, 248, 103, 0.71);
 }
 
 .container {
-  width: 60%;
-  margin: 80px auto;
+    width: 60%;
+    margin: 80px auto;
 }
 
 .area {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 
 .common {
-  width: 80%;
-  margin: 40px auto;
+    width: 80%;
+    margin: 40px auto;
 }
 
 .title {
-  text-align: center;
-  font-size: 48px;
+    text-align: center;
+    font-size: 48px;
 }
 
 /* nav */
 .header {
-  display: flex;
-  justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .nav-button {
-  font-size: 16px;
-  padding: 20px 100px;
-  border: none;
-  cursor: pointer;
-  color: black;
-  border-radius: 10px;
-  text-decoration: none;
-  background-color: #ffffff;
+    font-size: 16px;
+    padding: 20px 100px;
+    border: none;
+    cursor: pointer;
+    color: black;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #ffffff;
 }
 
 .nav-ul {
-  width: 100%;
-  padding-left: 0;
-  display: flex;
-  justify-content: space-around;
+    width: 100%;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
 .nav-list {
-  list-style: none;
-  box-sizing: border-box;
-  line-height: 1.5;
-  font-weight: 700;
-  background-color: #f0f0f0;
-  font-size: 16px;
-  width: 30%;
-  border-radius: 8px;
-  border: none;
-  padding: 20px 8px;
-  margin-bottom: 20px;
-  text-align: center;
+    list-style: none;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-weight: 700;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    width: 30%;
+    border-radius: 8px;
+    border: none;
+    padding: 20px 8px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .nav-link {
-  text-decoration: none;
-  padding: 20px 60px;
+    text-decoration: none;
+    padding: 20px 60px;
 }
 
 .container-area {
-  width: 60%;
-  margin: 40px auto;
+    width: 60%;
+    margin: 40px auto;
 }
 
 .input::placeholder {
-  color: #c0c0c0;
+    color: #c0c0c0;
 }
 
 .input-form {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .input-area {
-  background-color: #ffffff;
-  font-size: 16px;
-  width: 100%;
-  height: 50px;
-  box-sizing: border-box;
-  border-radius: 8px;
-  border: none;
-  padding: 10px;
+    background-color: #ffffff;
+    font-size: 16px;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
 }
 
 .submit-form {
-  text-align: center;
+    text-align: center;
 }
 
 .submit-button {
-  display: block;
-  width: 100%;
-  background-color: #000000;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  padding: 20px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-  appearance: none;
-  border-radius: 10px;
-  transition: 0.3s;
+    display: block;
+    width: 100%;
+    background-color: #000000;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    appearance: none;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
 .submit-button:hover {
-  background-color: #919090;
-  color: black;
-  transition: 0.2s;
+    background-color: #919090;
+    color: black;
+    transition: 0.2s;
 }
 
 .content-area {
-  background-color: #ffffff;
-  font-size: 16px;
-  width: 100%;
-  height: 200px;
-  box-sizing: border-box;
-  border-radius: 8px;
-  border: none;
-  padding: 10px;
+    background-color: #ffffff;
+    font-size: 16px;
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
 }
 
 .list-row {
-  padding: 0;
-  position: relative;
+    padding: 0;
+    position: relative;
 }
 
 .list {
-  list-style: none;
-  box-sizing: border-box;
-  line-height: 1.5;
-  font-weight: 700;
-  background-color: #f0f0f0;
-  font-size: 16px;
-  width: 100%;
-  border-radius: 8px;
-  border: none;
-  padding: 25px 8px;
-  margin-bottom: 20px;
+    list-style: none;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-weight: 700;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    padding: 25px 8px;
+    margin-bottom: 20px;
 }
 
 .item {
-  cursor: pointer;
-  margin-left: 10px;
-  margin-top: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 8px;
 }
 
 .edit-input {
-  border: none;
-  background-color: #f0f0f0;
-  font-size: 16px;
+    border: none;
+    background-color: #f0f0f0;
+    font-size: 16px;
 }
 
 .fa-file {
-  position: absolute;
-  right: 100px;
-  cursor: pointer;
-  margin-top: 5px;
+    position: absolute;
+    right: 100px;
+    cursor: pointer;
+    margin-top: 5px;
 }
 
 .fa-pen-square {
-  position: absolute;
-  right: 60px;
-  cursor: pointer;
-  margin-top: 5px;
+    position: absolute;
+    right: 60px;
+    cursor: pointer;
+    margin-top: 5px;
 }
 
 .fa-trash {
-  position: absolute;
-  right: 10px;
-  width: 30px;
-  cursor: pointer;
-  margin-top: 5px;
+    position: absolute;
+    right: 10px;
+    width: 30px;
+    cursor: pointer;
+    margin-top: 5px;
 }
 
 .button {
-  display: block;
-  width: 100%;
-  background-color: #ff9900;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  padding: 20px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-  appearance: none;
-  border-radius: 10px;
-  transition: 0.3s;
+    display: block;
+    width: 100%;
+    background-color: #ff9900;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    appearance: none;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
 .button:hover {
-  background-color: #d87e00;
+    background-color: #d87e00;
 }
 
 .textarea {
-  background-color: #ffffff;
-  font-size: 16px;
-  width: 100%;
-  height: 150px;
-  box-sizing: border-box;
-  border-radius: 8px;
-  border: none;
-  padding: 10px;
+    background-color: #ffffff;
+    font-size: 16px;
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
 }
 
 .text::placeholder {
-  color: #c0c0c0;
+    color: #c0c0c0;
 }

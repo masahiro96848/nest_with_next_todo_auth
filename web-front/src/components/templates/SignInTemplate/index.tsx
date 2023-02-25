@@ -12,7 +12,7 @@ export const SignInTemplate = () => {
     })
 
     return (
-        <div className="contaier">
+        <div className="container">
             <h1 className="title">Login</h1>
             <form className="" onSubmit={handleLogin}>
                 <div className="area">
