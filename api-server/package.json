@@ -65,7 +65,7 @@
     "typescript": "^4.7.4"
   },
   "prisma": {
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "ts-node prisma/seeders/index.ts"
   },
   "jest": {
     "moduleFileExtensions": [
